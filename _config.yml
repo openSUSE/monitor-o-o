@@ -1,28 +1,30 @@
 lang: en
-title: openSUSE Template
-title_short: Template
-description: Template for openSUSE Websites
+title: openSUSE Monitor
+title_short: Monitor
+description: Monitoring of openSUSE Infrastrucutre
 email: admin@opensuse.org
 copyright: '© 2020 openSUSE contributors'
 baseurl: ""
-url: "https://template.opensuse.org"
-github_url: "https://github.com/openSUSE/jekyll-template"
+url: "https://monitor.opensuse.org"
 
 navbar_links:
   -
-    link: https://www.opensuse.org/
-    text: Absolute Link 1
+    link: https://monitor.opensuse.org/icingaweb2/
+    text: Monitoring
   -
-    link: /about/
-    text: Relative Link 2
+    link: https://status.opensuse.org/
+    text: Status
+  -
+    link: https://monitor.opensuse.org/grafana/
+    text: Grafana
 
 footer_links:
   -
     text: Source Code
-    link: https://github.com/openSUSE/jekyll-template
+    link: https://github.com/openSUSE/monitor-o-o
   -
     text: License
-    link: https://github.com/openSUSE/jekyll-template/blob/master/COPYING
+    link: https://github.com/openSUSE/monitor-o-o/blob/master/COPYING
 
 # Only edit below if you know what you are doing!
 
