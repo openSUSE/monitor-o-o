@@ -15,24 +15,24 @@
       </p>
       <p>
         We recently switched from 
-         <a href="https://github.com/Icinga/icinga-core" alt="Icinga Github Repo" target="_blank">Icinga</a>/
-         <a href="https://checkmk.com/" alt="Check MK" target="_blank">Check_MK</a>
+         <a href="https://github.com/Icinga/icinga-core" title="Icinga Github Repo" target="_blank">Icinga</a>/
+         <a href="https://checkmk.com/" title="Check MK" target="_blank">Check_MK</a>
           to an 
-         <a href="https://github.com/Icinga/icinga2" alt="Icinga2 Github Repo" target="_blank">Icinga2</a>
+         <a href="https://github.com/Icinga/icinga2" title="Icinga2 Github Repo" target="_blank">Icinga2</a>
           setup with 
-         <a href="https://github.com/Icinga/icingaweb2" alt="IcingaWeb2 Github Repo" target="_blank">IcingaWeb<a/>
+         <a href="https://github.com/Icinga/icingaweb2" title="IcingaWeb2 Github Repo" target="_blank">IcingaWeb</a>
           frontend. The checks are distributed via our internal Salt-Master.
       </p>
       <p>
         In general, we use packages from our preferred <a href="https://www.opensuse.org">distribution</a>
         , but enhance our setup with some additional packages from the 
-        <a href="https://build.opensuse.org/project/show/server:monitoring" alt="server:monitoring Repo" target="_blank">server:monitoring</a> 
+        <a href="https://build.opensuse.org/project/show/server:monitoring" title="server:monitoring Repo" target="_blank">server:monitoring</a> 
         repository.
       </p>
     </div>
     <div class="col-md-6">
       <a href="https://status.opensuse.org/">
-        <h2>
+        <h2 id="status">
           {% include status.svg %}
           Status page
         </h2>
@@ -50,12 +50,12 @@
       </p>
       <p>
         The software used for the status page is called 
-         <a href="https://cachethq.io/" alt="Cachet homepage" target="_blank">Cachet</a>.
+         <a href="https://cachethq.io/" title="Cachet homepage" target="_blank">Cachet</a>.
       </p>
     </div>
     <div class="col-md-6">
       <a href="https://monitor.opensuse.org/grafana/">
-        <h2>
+        <h2 id="grafana">
           {% include grafana.svg %}
           Grafana Dashboard
         </h2>
@@ -65,27 +65,27 @@
       </p>
       <ul>
         <li>
-          <a href="https://monitor.opensuse.org/grafana/d/L3NnUp8Zz/elasticsearch?orgId=1&from=1595323572556&to=1595327172556&var-interval=$__auto_interval_interval&var-cluster=elasticsearch&var-name=All&var-instance=water" alt="Elasticsearch" target="_blank">Elasticsearch instances</a> for the 
-          <a href="https://en.opensuse.org/" alt="openSUSE wiki" target="_blank">openSUSE Wiki</a>.
+          <a href="https://monitor.opensuse.org/grafana/d/L3NnUp8Zz/elasticsearch?orgId=1&from=1595323572556&to=1595327172556&var-interval=$__auto_interval_interval&var-cluster=elasticsearch&var-name=All&var-instance=water" title="Elasticsearch DB" target="_blank">Elasticsearch instances</a> for the 
+          <a href="https://en.opensuse.org/" title="openSUSE wiki" target="_blank">openSUSE Wiki</a>.
         </li>
         <li>
-          <a href="https://monitor.opensuse.org/grafana/d/s_k9wGNiz/galera-cluster-overview?orgId=1&from=1594722540030&to=1595327340030&var-interval=$__auto_interval_interval&var-instances=All&var-cluster=galera_cluster1" alt="Galera Cluster" target="_blank">Galera Cluster</a> hosting all application databases that need a MariaDB.
+          <a href="https://monitor.opensuse.org/grafana/d/s_k9wGNiz/galera-cluster-overview?orgId=1&from=1594722540030&to=1595327340030&var-interval=$__auto_interval_interval&var-instances=All&var-cluster=galera_cluster1" title="Galera Cluster overview" target="_blank">Galera Cluster</a> hosting all application databases that need a MariaDB.
         </li>
         <li>
-          <a href="https://monitor.opensuse.org/grafana/d/wGgaPlciz/postgresql-overview?orgId=1&from=1594722635428&to=1595327435428&var-host=All&var-db=All" alt="PostgreSQL" target="_blank">PostgreSQL cluster</a> hosting all application databases that need a PostgreSQL database.
+          <a href="https://monitor.opensuse.org/grafana/d/wGgaPlciz/postgresql-overview?orgId=1&from=1594722635428&to=1595327435428&var-host=All&var-db=All" title="PostgreSQL" target="_blank">PostgreSQL cluster</a> hosting all application databases that need a PostgreSQL database.
         </li>
         <li>
-          <a href="https://monitor.opensuse.org/grafana/d/YyV2BduWk/base-metrics?orgId=1&refresh=30s&from=1594722718422&to=1595327518423&var-hostname=anna.infra.opensuse.org&var-command=check-ssl-validity&var-service=check-http-ssl&var-disk=&var-windisk=&var-metric=" alt="Host metrics" target="_blank">Host metrics</a> showing some additional information from the machines, which run our services in the backend. The information here 
+          <a href="https://monitor.opensuse.org/grafana/d/YyV2BduWk/base-metrics?orgId=1&refresh=30s&from=1594722718422&to=1595327518423&var-hostname=anna.infra.opensuse.org&var-command=check-ssl-validity&var-service=check-http-ssl&var-disk=&var-windisk=&var-metric=" title="Host metrics from monitoring" target="_blank">Host metrics</a> showing some additional information from the machines, which run our services in the backend. The information here 
           is collected by our 
           <a href="#monitoring">monitoring</a> and pushed into an 
-          <a href="https://www.influxdata.com/" alt="InfluxDB homepage" target="_blank">InfluxDB</a>
+          <a href="https://www.influxdata.com/" title="InfluxDB homepage" target="_blank">InfluxDB</a>
           , from which Grafana gathers the data.
         </li>
        </ul>
     </div>
     <div class="col-md-6">
       <a href="https://monitor.opensuse.org/heroes/">
-        <h2>
+        <h2 id="irc">
           {% include irc.svg %}
           IRC Logs
         </h2>
@@ -95,21 +95,21 @@
       </p>
       <p>
         Please be reminded that everything you type in this channel will not only be logged here on this page: 
-        <a href="https://en.wikipedia.org/wiki/Internet_Relay_Chat" alt="IRC definition" target="_blank">IRC</a>
+        <a href="https://en.wikipedia.org/wiki/Internet_Relay_Chat" title="IRC definition" target="_blank">IRC</a>
         allows everyone around the world to participate (and log!) in various conversation channels. While we 
         might be able to remove some log entries from our server, we can not speak for other people around the 
         world - nor are we responsible for them and their doings.
       </p>
       <p>
         Please remember to follow some common 
-         <a href="https://meta.wikimedia.org/wiki/IRC/Guidelines" alt="IRC guidelines" target="_blank">guidelines</a> 
+         <a href="https://meta.wikimedia.org/wiki/IRC/Guidelines" title="IRC guidelines" target="_blank">guidelines</a> 
         to keep our channel a useful and friendly place for everyone to exchange ideas, post status updates and 
         chat in a welcoming environment.
       </p>
     </div>
     <div class="col-md-6">
       <a href="https://graylog.opensuse.org/">
-        <h2>
+        <h2 id=graylog">
           {% include graylog.svg %}
           Graylog instance
         </h2>
@@ -119,10 +119,10 @@
       </p>
       <p>
         We use the standard 
-         <a href="https://www.rsyslog.com/" alt="rsyslog homepage" target="_blank">rsyslog</a>
+         <a href="https://www.rsyslog.com/" title="rsyslog homepage" target="_blank">rsyslog</a>
         package from our distribution to send system messages to a central place inside our network. 
         From there, we push them into a 
-         <a href="https://www.graylog.org/" alt="Graylog homepage" target="_blank">Graylog</a>
+         <a href="https://www.graylog.org/" title="Graylog homepage" target="_blank">Graylog</a>
         instance, that helps us to check, analyze and correlate the messages with a nice and shiny 
         WebUI. 
       </p>
