@@ -1,7 +1,7 @@
 lang: en
 title: openSUSE Monitor
 title_short: Monitor
-description: Monitoring of openSUSE Infrastrucutre
+description: Monitoring of openSUSE Infrastructure
 email: admin@opensuse.org
 copyright: '© 2021 openSUSE contributors'
 baseurl: ""
