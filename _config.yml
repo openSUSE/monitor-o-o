@@ -17,6 +17,9 @@ navbar_links:
   -
     link: https://monitor.opensuse.org/grafana/
     text: Grafana
+  -
+    link: https://monitor.opensuse.org/heroes/
+    text: IRC Logs
 #  -
 #    link: https://graylog.opensuse.org/
 #    text: Graylog

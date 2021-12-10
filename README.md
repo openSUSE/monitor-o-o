@@ -3,7 +3,9 @@ The home page for the openSUSE Infrastructure
 
 ## How to build?
 
-Under a new enough system (openSUSE 15.2 or openSUSE Tumbleweed), 
+```sudo zypper in 'rubygem(bundler)' 'rubygem(jekyll)' ruby-devel
+
+Under a new enough system (openSUSE >15.2 or openSUSE Tumbleweed), 
 it should be enough to call:
 ```bash
 bundle install
