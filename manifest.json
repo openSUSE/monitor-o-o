@@ -1,0 +1,3 @@
+---
+---
+{"name":"{{ site.title | escape }}","short_name":"{{ site.title | escape }}","description":"{{ site.description | escape }}","background_color":"#ffffff","theme_color":"#73ba25","start_url":"/","scope":"/","display":"standalone","icons": [{"src": "https://static.opensuse.org/favicon-192.png","type": "image/png","sizes": "192x192"},{"src": "https://static.opensuse.org/favicon-48.png","type": "image/png","sizes": "48x48"},{"src": "https://static.opensuse.org/favicon-32.png","type": "image/png","sizes": "32x32"}]}
