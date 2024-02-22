@@ -15,19 +15,21 @@ layout: default
         This page requires valid log in data (<a href="https://en.opensuse.org/openSUSE:Heroes" target="_blank">openSUSE heroes</a> account).
       </p>
       <p>
-        We recently switched from 
-         <a href="https://github.com/Icinga/icinga-core" title="Icinga Github Repo" target="_blank">Icinga</a>/
-         <a href="https://checkmk.com/" title="Check MK" target="_blank">Check_MK</a>
-          to an 
+        We are currently slowly transitioning from an
          <a href="https://github.com/Icinga/icinga2" title="Icinga2 Github Repo" target="_blank">Icinga2</a>
           setup with 
          <a href="https://github.com/Icinga/icingaweb2" title="IcingaWeb2 Github Repo" target="_blank">IcingaWeb</a>
-          frontend. The checks are distributed via our internal Salt-Master.
+          frontend to a
+         <a href="https://prometheus.io" title="Prometheus homepage" target="_blank">Prometheus</a>
+          based monitoring solution. The new configuration is entirely managed using
+         <a href="https://docs.saltproject.io/en/latest/topics/about_salt_project.html" title="Salt documentation" target="_blank">Salt</a>
+         and can be found in our 
+         <a href="https://code.opensuse.org/heroes/salt/tree/production" title="Heroes Salt Git Repository" target="_blank">Git repository</a>.
       </p>
       <p>
         In general, we use packages from our preferred <a href="https://www.opensuse.org">distribution</a>
-        , but enhance our setup with some additional packages from the 
-        <a href="https://build.opensuse.org/project/show/server:monitoring" title="server:monitoring Repo" target="_blank">server:monitoring</a> 
+        , but enhance our setup with additional packages gathered in the
+        <a href="https://build.opensuse.org/project/show/openSUSE:infrastructure:monitoring" title="openSUSE:infrastructure:monitoring project" target="_blank">openSUSE:infrastructure:monitoring</a> 
         repository.
       </p>
     </div>
@@ -79,11 +81,7 @@ layout: default
           Some <a href="https://monitor.opensuse.org/grafana/d/mvnQn-jGk/mail-metrics?orgId=1&from=1623302392439&to=1623323992439" title="Email" target="_blank">Email statistics</a> from our external Email servers.
         </li>
         <li>
-          <a href="https://monitor.opensuse.org/grafana/d/YyV2BduWk/base-metrics?orgId=1&refresh=30s&from=1594722718422&to=1595327518423&var-hostname=anna.infra.opensuse.org&var-command=check-ssl-validity&var-service=check-http-ssl&var-disk=&var-windisk=&var-metric=" title="Host metrics from monitoring" target="_blank">Host metrics</a> showing some additional information from the machines, which run our services in the backend. The information here 
-          is collected by our 
-          <a href="#monitoring">monitoring</a> and pushed into an 
-          <a href="https://www.influxdata.com/" title="InfluxDB homepage" target="_blank">InfluxDB</a>
-          , from which Grafana gathers the data.
+          <a href="https://monitor.opensuse.org/grafana/d/rYdddlPWk/node-metrics" title="Node metrics" target="_blank">Node metrics</a> presenting basic system statistics for all our machines.
         </li>
        </ul>
     </div>
