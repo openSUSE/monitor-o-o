@@ -9,8 +9,8 @@ url: "https://monitor.opensuse.org"
 
 navbar_links:
   -
-    link: https://monitor.opensuse.org/icingaweb2/
-    text: Monitoring
+    link: https://alerts.infra.opensuse.org/
+    text: Alerts (internal)
   -
     link: https://status.opensuse.org/
     text: Status

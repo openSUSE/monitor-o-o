@@ -4,30 +4,32 @@ layout: default
 <div class="container my-4">
   <div class="row">
     <div class="col-md-6">
-      <a href="https://monitor.opensuse.org/icingaweb2/">
+      <a href="https://alerts.infra.opensuse.org/">
         <h2 id="monitoring">
           {% include monitor.svg %}
-          Monitoring page
+          Alerting page
         </h2>
       </a>
       <p>
-        Get detailed monitoring information from our infrastructure. 
-        This page requires valid log in data (<a href="https://en.opensuse.org/openSUSE:Heroes" target="_blank">openSUSE heroes</a> account).
+        Detailed monitoring alerts from our infrastructure. 
+        This page is currently only accessible internally through the <a href="https://en.opensuse.org/openSUSE:Heroes" target="_blank">openSUSE Heroes</a> VPN.
       </p>
       <p>
-        We recently switched from 
-         <a href="https://github.com/Icinga/icinga-core" title="Icinga Github Repo" target="_blank">Icinga</a>/
-         <a href="https://checkmk.com/" title="Check MK" target="_blank">Check_MK</a>
-          to an 
+        We transitioned from an
          <a href="https://github.com/Icinga/icinga2" title="Icinga2 Github Repo" target="_blank">Icinga2</a>
-          setup with 
+          setup with the
          <a href="https://github.com/Icinga/icingaweb2" title="IcingaWeb2 Github Repo" target="_blank">IcingaWeb</a>
-          frontend. The checks are distributed via our internal Salt-Master.
+          frontend to a
+         <a href="https://prometheus.io" title="Prometheus homepage" target="_blank">Prometheus</a>
+          based monitoring solution. The new configuration is entirely managed using
+         <a href="https://docs.saltproject.io/en/latest/topics/about_salt_project.html" title="Salt documentation" target="_blank">Salt</a>
+         and can be found in our 
+         <a href="https://code.opensuse.org/heroes/salt/tree/production" title="Heroes Salt Git Repository" target="_blank">Salt Git repository</a>.
       </p>
       <p>
-        In general, we use packages from our preferred <a href="https://www.opensuse.org">distribution</a>
-        , but enhance our setup with some additional packages from the 
-        <a href="https://build.opensuse.org/project/show/server:monitoring" title="server:monitoring Repo" target="_blank">server:monitoring</a> 
+        The setup uses packages from our preferred <a href="https://www.opensuse.org">distribution</a>,
+         and is enhanced with custom packages gathered in the
+        <a href="https://build.opensuse.org/project/show/openSUSE:infrastructure:monitoring" title="openSUSE:infrastructure:monitoring project" target="_blank">openSUSE:infrastructure:monitoring</a> 
         repository.
       </p>
     </div>
@@ -43,11 +45,10 @@ layout: default
         current status of our infrastructure.
       </p>
       <p>
-        Please note, that the status information provided there is updated manually. We did not connect our 
-         <a href="#monitoring">Monitoring</a>
-        with the (available) API, as we think you earn a bit more explanations 
-        about the reasons why a service might be temporary down or
-        unreachable. Something, a machine can not provide (yet).
+        Please note that the status information provided there is updated manually. We did not connect our 
+         <a href="#monitoring">monitoring</a>
+        with the (available) API, as we have not yet implemented a way to provide meaningful user facing information automatically. We think you earn a bit more explanation
+        about the reasons why a service might be temporarily down or unreachable.
       </p>
       <p>
         The software used for the status page is called 
@@ -62,30 +63,8 @@ layout: default
         </h2>
       </a>
       <p>
-        Our public Grafana Dashboard shows some performance data from our main databases and hosts.
+        Our public Grafana dashboards visualize the various machine and service metrics gathered in our infrastructure.
       </p>
-      <ul>
-        <li>
-          <a href="https://monitor.opensuse.org/grafana/d/L3NnUp8Zz/elasticsearch?orgId=1&from=1595323572556&to=1595327172556&var-interval=$__auto_interval_interval&var-cluster=elasticsearch&var-name=All&var-instance=water" title="Elasticsearch DB" target="_blank">Elasticsearch instances</a> for the 
-          <a href="https://en.opensuse.org/" title="openSUSE wiki" target="_blank">openSUSE Wiki</a>.
-        </li>
-        <li>
-          <a href="https://monitor.opensuse.org/grafana/d/s_k9wGNiz/galera-cluster-overview?orgId=1&from=1594722540030&to=1595327340030&var-interval=$__auto_interval_interval&var-instances=All&var-cluster=galera_cluster1" title="Galera Cluster overview" target="_blank">Galera Cluster</a> hosting all application databases that need a MariaDB.
-        </li>
-        <li>
-          <a href="https://monitor.opensuse.org/grafana/d/wGgaPlciz/postgresql-overview?orgId=1&from=1620244490953&to=1620248090954" title="PostgreSQL" target="_blank">PostgreSQL cluster</a> hosting all application databases that need a PostgreSQL database.
-        </li>
-        <li>
-          Some <a href="https://monitor.opensuse.org/grafana/d/mvnQn-jGk/mail-metrics?orgId=1&from=1623302392439&to=1623323992439" title="Email" target="_blank">Email statistics</a> from our external Email servers.
-        </li>
-        <li>
-          <a href="https://monitor.opensuse.org/grafana/d/YyV2BduWk/base-metrics?orgId=1&refresh=30s&from=1594722718422&to=1595327518423&var-hostname=anna.infra.opensuse.org&var-command=check-ssl-validity&var-service=check-http-ssl&var-disk=&var-windisk=&var-metric=" title="Host metrics from monitoring" target="_blank">Host metrics</a> showing some additional information from the machines, which run our services in the backend. The information here 
-          is collected by our 
-          <a href="#monitoring">monitoring</a> and pushed into an 
-          <a href="https://www.influxdata.com/" title="InfluxDB homepage" target="_blank">InfluxDB</a>
-          , from which Grafana gathers the data.
-        </li>
-       </ul>
     </div>
     <div class="col-md-6">
       <a href="https://monitor.opensuse.org/heroes/">
