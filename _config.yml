@@ -1,9 +1,9 @@
 lang: en
 title: openSUSE Monitor
 title_short: Monitor
-description: Monitoring of openSUSE Infrastructure
+description: Monitoring of the openSUSE infrastructure
 email: admin@opensuse.org
-copyright: '© 2021 openSUSE contributors'
+copyright: '© 2021-2024 openSUSE contributors'
 baseurl: ""
 url: "https://monitor.opensuse.org"
 
@@ -30,7 +30,7 @@ footer_links:
     link: https://github.com/openSUSE/monitor-o-o
   -
     text: License
-    link: https://github.com/openSUSE/monitor-o-o/blob/master/COPYING
+    link: https://github.com/openSUSE/monitor-o-o/blob/master/LICENSE
 
 # Only edit below if you know what you are doing!
 
