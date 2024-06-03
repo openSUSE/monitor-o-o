@@ -3,10 +3,11 @@ The home page for the openSUSE Infrastructure
 
 ## How to build?
 
-```sudo zypper in 'rubygem(bundler)' 'rubygem(jekyll)' ruby-devel
+```sudo zypper in awk gcc-c++ git-core make openssl-devel 'rubygem(bundler)' 'rubygem(jekyll)' 'rubygem(strscan)' ruby-devel
 
-Under a new enough system (openSUSE >15.2 or openSUSE Tumbleweed), 
-it should be enough to call:
+Unfortunately not all of these packages are available in the distribution repositories.
+
+After having satisfied the dependencies, it should be enough to call:
 ```bash
 bundle install
 ```
