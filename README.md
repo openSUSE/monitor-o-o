@@ -3,7 +3,9 @@ The home page for the openSUSE Infrastructure
 
 ## How to build?
 
-```sudo zypper in awk gcc-c++ git-core make openssl-devel 'rubygem(bundler)' 'rubygem(jekyll)' 'rubygem(strscan)' ruby-devel
+```bash
+sudo zypper in awk gcc-c++ git-core make openssl-devel 'rubygem(bundler)' 'rubygem(jekyll)' 'rubygem(strscan)' ruby-devel
+```
 
 Unfortunately not all of these packages are available in the distribution repositories.
 
